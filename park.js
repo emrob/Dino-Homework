@@ -17,12 +17,16 @@ Park.prototype.removeDino = function(type) {
   }
 }
 
-Park.prototype.moreThanTwoOffspring = function() {
-  var total = [];
-  if (dino.offspring > 2){
-    total.addDino(dino)
+Park.prototype.moreThanTwoOffspring = function(dino) {
+var total = [];
+  for (var dino of this.enclosure) {
+    if (dino.offspring > 2) {
+      total.push(dino);
+    }
+
   }
-return total;
+  return total;
 }
+
 
 module.exports = Park;

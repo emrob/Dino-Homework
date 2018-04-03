@@ -10,8 +10,8 @@ describe('Park', function(){
 
     beforeEach(function(){
       park = new Park();
-      dino1 = new Dino("T-Rex", 2);
-      dino2 = new Dino("Stegosaurus", 1);
+      dino1 = new Dino("T-Rex", 1);
+      dino2 = new Dino("Stegosaurus", 4);
       dino3 = new Dino("Diplodocus", 3);
 
     });
@@ -36,7 +36,7 @@ describe('Park', function(){
     park.addDino(dino1);
     park.addDino(dino2);
     park.addDino(dino3);
-    assert.strictEqual(park.moreThanTwoOffspring.length, 1);
+    assert.strictEqual(park.moreThanTwoOffspring.length,2);
 })
 
 
