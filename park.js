@@ -17,7 +17,7 @@ Park.prototype.removeDino = function(type) {
   }
 }
 
-Park.prototype.moreThanTwoOffspring = function(dino) {
+Park.prototype.moreThanTwoOffspring = function() {
 var total = [];
   for (var dino of this.enclosure) {
     if (dino.offspring > 2) {
@@ -27,6 +27,20 @@ var total = [];
   }
   return total;
 }
+
+Park.prototype.totalDinoCount = function() {
+  for (var dino of this.enclosure) {
+    dino.NumKidsPerYear();
+
+  }
+}
+
+// const items = ['item1', 'item2', 'item3'];
+// const copy = [];
+//
+// for (let i=0; i<items.length; i++) {
+//   copy.push(items[i])
+// }
 
 
 module.exports = Park;

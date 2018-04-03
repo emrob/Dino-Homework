@@ -18,4 +18,8 @@ describe('Dinosaur', function(){
     assert.strictEqual(dino1.offspring, 2);
   })
 
+  it('number of offspring a dino has per year', function(){
+    assert.strictEqual(dino1.NumKidsPerYear(2), 4);
+  })
+
 })

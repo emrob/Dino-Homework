@@ -36,8 +36,15 @@ describe('Park', function(){
     park.addDino(dino1);
     park.addDino(dino2);
     park.addDino(dino3);
-    assert.strictEqual(park.moreThanTwoOffspring.length,2);
+    assert.strictEqual(park.moreThanTwoOffspring().length,2);
 })
+
+// it('should be able return all dinos', function(){
+//   park.addDino(dino1);
+//   park.addDino(dino2);
+//   park.addDino(dino3);
+//   assert.strictEqual(park.totalDinoCount, 1);
+// })
 
 
 });

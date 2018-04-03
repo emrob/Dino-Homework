@@ -3,5 +3,11 @@ var Dino = function(type, offspring){
   this.offspring = offspring;
 }
 
+Dino.prototype.NumKidsPerYear = function (numYears){
+ this.total = numYears * this.offspring;
+ return this.total;
+}
+
+
 
 module.exports = Dino;
