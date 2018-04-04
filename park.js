@@ -9,12 +9,14 @@ Park.prototype.addDino = function (dino) {
 
 
 Park.prototype.removeDino = function(type) {
+  var dinosToKeep = [];
   for (var dino of this.enclosure) {
     if (dino.type === type) {
       var index = this.enclosure.indexOf(dino);
-      this.enclosure.splice(index, 1);
+      dinosToKeep.push(this.enclosure.splice(index, 1));
     }
   }
+  this.enclosure = dinosToKeep;
 }
 
 Park.prototype.moreThanTwoOffspring = function() {
@@ -29,18 +31,14 @@ var total = [];
 }
 
 Park.prototype.totalDinoCount = function() {
+  var total = [];
   for (var dino of this.enclosure) {
     dino.NumKidsPerYear();
 
   }
 }
 
-// const items = ['item1', 'item2', 'item3'];
-// const copy = [];
-//
-// for (let i=0; i<items.length; i++) {
-//   copy.push(items[i])
-// }
+
 
 
 module.exports = Park;
